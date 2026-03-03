@@ -1,0 +1,126 @@
+{
+  "info": {
+    "_postman_id": "ebb12e81-ff43-4daa-9f37-b8bbcc43b162",
+    "name": "Microservices Lab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Items",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Headphones\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["items"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Items",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["items"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Orders",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"item\": \"Laptop\",\n  \"quantity\": 2,\n  \"customerId\": \"C001\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["orders"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Payments",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"orderId\": 1,\n  \"amount\": 1299.99,\n  \"method\": \"CARD\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/payments/process",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["payments", "process"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Payments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/payments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["payments"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
